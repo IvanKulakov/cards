@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Step3</title>
+</head>
+
+<body>
+<header class="group header">
+    <img class="header__logo" src="imgs/site-logo.png" alt="site-logo">
+    <form class="header__auth auth-form" id="passBlock">
+        <input class="auth-form__email-input input" type="email" id="email" placeholder="Enter e-mail">
+        <input class="auth-form__pass-input input" type="password" id="pass" autocomplete="current-password"
+               placeholder="Enter password">
+        <button class="auth-form__submit-button btn" type="submit" id="enter">Вход</button>
+    </form>
+    <a role="button" class="btn btn--large vis" id="create-visit">Создать визит</a>
+</header>
+
+<main class="cards-collection group vis" id="cardsBlock">
+    <form class="cards-collection__filter filter">
+        <h3 class="filter__title">Card filter</h3>
+        <label class="filter__priority-param-label">Content: <input class="filter__text-param input" type="text" id="content-filter"></label>
+        <label class="filter__status-param-label">Status: <select class="filter__status-param input" id="status">
+            <option value>All</option>
+            <option value="open">Open</option>
+            <option value="done">Done</option>
+        </select></label>
+        <label class="filter__priority-param-label">Priority: <select class="filter__priority-param input" id="priority">
+            <option value>All</option>
+            <option value="high">High</option>
+            <option value="normal">Normal</option>
+            <option value="low">Low</option>
+        </select></label>
+    </form>
+    <div class="cards-collection__wrapper" id="cardPlace"></div>
+</main>
+
+<script src="scripts/main.js" type="module"></script>
+</body>
+</html>
