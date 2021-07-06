@@ -1,7 +1,7 @@
 import {CreateVisitModal, EditVisitModal, MoreInfoModal} from "./modalsClasses.js";
 import {fetchMethods} from "./fetchMethods.js";
 import {Visit,Cardiologist, Dentist, Therapist} from "./visitClasses.js";
-import {Filter} from "./filter.js";
+import {filter} from "./filter.js";
 export const docTypeMap = {
     'Cardiologist': Cardiologist,
     'Therapist': Therapist,
@@ -128,11 +128,11 @@ window.logCards = () => console.log(cardsCollection);
 
 
 
-    contentFilter.addEventListener('input', Filter.prototype.filterByContent);
+    contentFilter.addEventListener('input', filter);
 
-    priority.addEventListener('change', Filter.prototype.filterByPriority);
+    priority.addEventListener('change', filter);
 
-    status.addEventListener('change', Filter.prototype.filterByStatus);
+    status.addEventListener('change', filter);
 
 })();
 
